@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Character Count</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="application.css">
+
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@hotwired/stimulus": "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+          }
+        }
+      </script>
+  </head>
+
+  <body>
+    <div data-controller="character-count" class="container p-5">
+      <!-- TODO: Code here -->
+       <h2>Short Blurb Counter</h2>
+      <textarea data-action="keyup->character-count#updateCounter" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+       <div data-character-count-target="counter"></div>
+       <br><br><br>
+       <h2>Medium Blurb Counter</h2>
+       <textarea data-action="keyup->character-count#updateCounter2" class="form-control" id="exampleFormControlTextarea2" rows="4"></textarea>
+        <div data-character-count-target="counter2"></div>
+    </div>
+
+    <script src="lib/index.js" type="module"></script>
+  </body>
+</html>
